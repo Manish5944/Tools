@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your one-stop destination for free online tools. Compress images, edit PDFs, and more!">
+    <meta name="keywords" content="image tools, PDF tools, online tools, compress images, edit PDFs">
+    <meta name="author" content="Your Name">
+    <title>Online Tools - Image & PDF Tools</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #4CAF50;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .tool-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .tool-card h3 {
+            font-size: 1.2rem;
+            margin: 15px 0 10px;
+            padding: 0 15px;
+        }
+
+        .tool-card p {
+            font-size: 0.9rem;
+            color: #666;
+            padding: 0 15px 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Online Tools</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Image Tools</a></li>
+                <li><a href="#">PDF Tools</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your One-Stop Destination for Free Online Tools</h1>
+        <p>Compress images, edit PDFs, and more!</p>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="tools-grid" id="tools-grid">
+        <!-- Tool cards will be dynamically generated here -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Online Tools. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Tool Data with Specific Images
+        const tools = [
+            {
+                name: "Image Compressor",
+                description: "Compress your images without losing quality.",
+                image: "https://via.placeholder.com/300x150/4CAF50/FFFFFF?text=Image+Compressor", // Image Compressor image
+                link: "image-compressor.html",
+                voice: "This is the Image Compressor tool. Use it to reduce the size of your images."
+            },
+            {
+                name: "Priya Wallpaper",
+                description: "Download beautiful wallpapers for your devices.",
+                image: "https://via.placeholder.com/300x150/FF5722/FFFFFF?text=Priya+Wallpaper", // Priya Wallpaper image
+                link: "priya-wallpaper.html",
+                voice: "This is the Priya Wallpaper tool. Use it to download stunning wallpapers."
+            },
+            {
+                name: "PDF Merger",
+                description: "Merge multiple PDF files into one.",
+                image: "https://via.placeholder.com/300x150/03A9F4/FFFFFF?text=PDF+Merger", // PDF Merger image
+                link: "pdf-merger.html",
+                voice: "This is the PDF Merger tool. Use it to combine multiple PDFs into a single file."
+            },
+            {
+                name: "Image Converter",
+                description: "Convert images to different formats.",
+                image: "https://via.placeholder.com/300x150/9C27B0/FFFFFF?text=Image+Converter", // Image Converter image
+                link: "image-converter.html",
+                voice: "This is the Image Converter tool. Use it to convert images to various formats."
+            }
+        ];
+
+        // Generate Tool Cards
+        const toolsGrid = document.getElementById("tools-grid");
+
+        tools.forEach(tool => {
+            const toolCard = document.createElement("a");
+            toolCard.href = tool.link;
+            toolCard.classList.add("tool-card");
+
+            toolCard.innerHTML = `
+                <img src="${tool.image}" alt="${tool.name}">
+                <h3>${tool.name}</h3>
+                <p>${tool.description}</p>
+            `;
+
+            // Add voice description on hover
+            toolCard.addEventListener("mouseenter", () => {
+                const speech = new SpeechSynthesisUtterance(tool.voice);
+                window.speechSynthesis.speak(speech);
+            });
+
+            toolsGrid.appendChild(toolCard);
+        });
+    </script>
+</body>
+</html>
